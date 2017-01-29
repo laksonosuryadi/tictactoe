@@ -137,6 +137,10 @@ li {
   border-radius: 8px
 }
 
+.underlined:hover {
+  border-bottom: 2px solid rgb(255,78,68);
+}
+
 /****************************** MEDIA QUERY ******************************/
 
 @media only screen and (max-width: 640px) {
