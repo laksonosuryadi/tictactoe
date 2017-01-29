@@ -1,10 +1,10 @@
 #Tic-Tac-Toe!
 ###Hacktiv8 - Phase-0
 ###Week 2 - Day 5
-______
+
 
 Ini adalah Weekly Project ke 2 dari Phase-0 Hacktiv 8.
-Saya membuat game Tic-Tac-Toe sederhana dengan menggunakan Vanilla JS untuk mengatur _game mechanics_-nya,
+Saya membuat game Tic-Tac-Toe sederhana dengan menggunakan Vanilla JS untuk mengatur game mechanics-nya,
 beserta HTML untuk pembuatan canvas dan CSS untuk layouting.
 Tampilannya juga sudah dibuat responsive dengan display mobile phone.
 
@@ -16,7 +16,7 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
 INISIALISASI Variables yang akan digunakan
 DEKLARASI Constructor Function var Announce1,var Announce2 untuk di-instantiate pada function sayWinner()
 
-_//Randomize First Turn_
+//Randomize First Turn
 INPUT Nama Player X
 INPUT Nama Player O
 RANDOMIZE Turn pertama dengan Object Math Math.random
@@ -25,7 +25,7 @@ IF Modulus 2 dari turn adalah 0
 ELSE
     TAMPILKAN [Nama Player O] is O & gets the 1st Turn!
 
-_//Game Mechanics_
+//Game Mechanics
 PANGGIL Function canvasClicked(canvasNumber) jika pemain mengklik salah satu Kotak (Canvas)
 IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 0
     IF Modulus 2 dari turn adalah 0
@@ -73,8 +73,8 @@ ELSE
     ALERT That box is already occupied. Please TIC another box.
 ENDIF
 
-____________
-_//PSEUDOCODE Function checkForWinner_
+
+//PSEUDOCODE Function checkForWinner
 //content[...] adalah posisi canvas di dalam Array content
 //symbol adalah X atau O
 IF(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
@@ -113,8 +113,8 @@ IF(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
                                         RETURN true
 ENDIF
 
-______________
-_//PSEUDOCODE Function sayWinner_
+
+//PSEUDOCODE Function sayWinner
 INSTANTIATE Object p1 dengan Function Constructor Announce1
 INSTANTIATE Object p2 dengan Function Constructor Announce2
 IF value dari symbol adalah X
@@ -128,8 +128,7 @@ IF value dari symbol adalah X
 ENDIF
 
 
-______________
-_//PSEUDOCODE Function checkForDraw_
+//PSEUDOCODE Function checkForDraw
 IF NOT(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
     TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
     HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
@@ -157,8 +156,7 @@ IF NOT(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
 ENDIF
 
 
-______________
-_//PSEUDOCODE Function reset_
+//PSEUDOCODE Function reset
 TAMPILKAN pop-up window confirm untuk pertanyaan Play Again?
     IF player memilih OK
         ALERT Now Loading...
