@@ -1,6 +1,5 @@
 #Tic-Tac-Toe!
-###Hacktiv8 - Phase-0
-###Week 2 - Day 5
+##Hacktiv8 - Phase-0 - Week 2 - Day 5
 
 
 Ini adalah Weekly Project ke 2 dari Phase-0 Hacktiv 8.
@@ -12,22 +11,23 @@ Untuk mencoba game ini, silahkan klik [di sini.](https://laksonosuryadi.github.i
 Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosuryadi.github.io/) saya (klik Project-1 pada navigation bar).
 
 
-##Pseudocode
+#Pseudocode for Tic-Tac-Toe!
 
     INISIALISASI Variables yang akan digunakan
     DEKLARASI Constructor Function var Announce1,var Announce2 untuk di-instantiate pada function sayWinner()
 
-    //Randomize Turn Pertama
+    //G A M E   I N I T I A L I Z A T I O N
     INPUT Nama Player X
     INPUT Nama Player O
-    RANDOMIZE Turn pertama dengan Object Math Math.random
+    RANDOMIZE Turn pertama dengan Object Math Math.round(Math.random() dikali 10
     IF Modulus 2 dari turn adalah 0
         TAMPILKAN [Nama Player X] is X & gets the 1st Turn!
     ELSE
         TAMPILKAN [Nama Player O] is O & gets the 1st Turn!
 
-    //Pseudocode Function canvasClicked(canvasNumber)
-    PANGGIL Function canvasClicked(canvasNumber) jika pemain mengklik salah satu Kotak (Canvas)
+    //G A M E   M E C H A N I C S
+    //PSEUDOCODE Function canvasClicked(canvasNumber)
+    PANGGIL Function canvasClicked(canvasNumber) _**jika pemain mengklik salah satu Kotak (Canvas)**_
         IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 0
             IF Modulus 2 dari turn adalah 0
                 GAMBARKAN tanda X pada canvas tersebut dengan warna Hijau
@@ -50,29 +50,29 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
                 PANGGIL Function checkForDraw(content[canvasNumber])
             ENDIF
 
-        ELSE IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 1
-            IF Modulus 2 dari turn adalah 0
-                ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
-            ELSE
+            ELSE IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 1
+                IF Modulus 2 dari turn adalah 0
+                    ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
+                ELSE
+                    ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
+                ENDIF
+            END IF
+
+            ELSE IF canvas sudah terisi (filled[canvasNumber] === true) DAN var q === 1
+                IF Modulus 2 dari turn adalah 0
+                    ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
+                ELSE
+                    ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
+                ENDIF
+            ENDIF
+
+            ELSE IF canvas sudah terisi (filled[canvasNumber] === true) DAN jumlah canvas yang terisi sudah 9
                 ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
             ENDIF
-        END IF
-
-        ELSE IF canvas sudah terisi (filled[canvasNumber] === true) DAN var q === 1
-            IF Modulus 2 dari turn adalah 0
-                ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
-            ELSE
-                ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
-            ENDIF
-        ENDIF
-
-        ELSE IF canvas sudah terisi (filled[canvasNumber] === true) DAN jumlah canvas yang terisi sudah 9
-            ALERT THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.
-        ENDIF
 
         ELSE
             ALERT That box is already occupied. Please TIC another box.
-ENDIF
+        ENDIF
 
 
     //PSEUDOCODE Function checkForWinner
@@ -82,37 +82,45 @@ ENDIF
         PANGGIL function sayWinner(symbol)
         TAMPILKAN Button PLAY AGAIN
         UBAH value var q menjadi 1
+
         ELSE IF(content[3] == symbol DAN content[4] == symbol DAN content[5] == symbol)
             PANGGIL function sayWinner(symbol)
             TAMPILKAN Button PLAY AGAIN
             UBAH value var q menjadi 1
+
             ELSE IF(content[6] == symbol DAN content[7] == symbol DAN content[8] == symbol)
                 PANGGIL function sayWinner(symbol)
                 TAMPILKAN Button PLAY AGAIN
                 UBAH value var q menjadi 1
+
                 ELSE IF(content[0] == symbol DAN content[3] == symbol DAN content[6] == symbol)
                     PANGGIL function sayWinner(symbol)
                     TAMPILKAN Button PLAY AGAIN
                     UBAH value var q menjadi 1
+
                         ELSE IF(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
                         PANGGIL function sayWinner(symbol)
                         TAMPILKAN Button PLAY AGAIN
                         UBAH value var q menjadi 1
+
                             ELSE IF(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
                             PANGGIL function sayWinner(symbol)
                             TAMPILKAN Button PLAY AGAIN
                             UBAH value var q menjadi 1
+
                             ELSE IF(content[0] == symbol DAN content[4] == symbol DAN content[8] == symbol)
                                 PANGGIL function sayWinner(symbol)
                                 TAMPILKAN Button PLAY AGAIN
                                 UBAH value var q menjadi 1
+
                                 ELSE IF(content[2] == symbol DAN content[4] == symbol DAN content[6] == symbol)
                                     PANGGIL function sayWinner(symbol)
                                     TAMPILKAN Button PLAY AGAIN
                                     UBAH value var q menjadi 1
+
                                         ELSE
                                             RETURN true
-ENDIF
+    ENDIF
 
 
     //PSEUDOCODE Function sayWinner
@@ -129,39 +137,46 @@ ENDIF
     ENDIF
 
 
-//PSEUDOCODE Function checkForDraw
-IF NOT(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
-    TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-    HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-    ELSE IF NOT(content[3] == symbol DAN content[4] == symbol DAN content[5] == symbol)
+    //PSEUDOCODE Function checkForDraw
+    IF NOT(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
         TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
         HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-        ELSE IF NOT(content[6] == symbol DAN content[7] == symbol DAN content[8] == symbol)
+
+        ELSE IF NOT(content[3] == symbol DAN content[4] == symbol DAN content[5] == symbol)
             TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
             HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-            ELSE IF NOT(content[0] == symbol DAN content[3] == symbol DAN content[6] == symbol)
+
+            ELSE IF NOT(content[6] == symbol DAN content[7] == symbol DAN content[8] == symbol)
                 TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
                 HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-                ELSE IF NOT(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
+
+                ELSE IF NOT(content[0] == symbol DAN content[3] == symbol DAN content[6] == symbol)
                     TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
                     HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-                    ELSE IF NOT(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
+
+                    ELSE IF NOT(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
                         TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
                         HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-                        ELSE IF NOT(content[0] == symbol DAN content[4] == symbol DAN content[8] == symbol)
+
+                        ELSE IF NOT(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
                             TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
                             HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-                            ELSE IF NOT(content[2] == symbol DAN content[4] == symbol DAN content[6] == symbol)
+
+                            ELSE IF NOT(content[0] == symbol DAN content[4] == symbol DAN content[8] == symbol)
                                 TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
                                 HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-ENDIF
 
-
-//PSEUDOCODE Function reset
-TAMPILKAN pop-up window confirm untuk pertanyaan Play Again?
-    IF player memilih OK
-        ALERT Now Loading...
-        PANGGIL location.reload(true)
-    ELSE
-        ALERT Thanks for playing! See you again!
+                                ELSE IF NOT(content[2] == symbol DAN content[4] == symbol DAN content[6] == symbol)
+                                    TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
+                                    HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
     ENDIF
+
+
+    //PSEUDOCODE Function reset
+    TAMPILKAN pop-up window confirm untuk pertanyaan Play Again?
+        IF player memilih OK
+            ALERT Now Loading...
+            PANGGIL location.reload(true)
+        ELSE
+            ALERT Thanks for playing! See you again!
+        ENDIF
