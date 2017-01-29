@@ -1,13 +1,13 @@
 #Tic-Tac-Toe!
-##Hacktiv8 - Phase-0 - Week 2 - Day 5
+###Hacktiv8 - Phase0 - Week2 - Day5
 
 
-Ini adalah Weekly Project ke 2 dari Phase-0 Hacktiv 8.
-Saya membuat game Tic-Tac-Toe sederhana dengan menggunakan Vanilla JS untuk mengatur game mechanics-nya,
-beserta HTML untuk pembuatan canvas dan CSS untuk layouting.
+Ini adalah Weekly Project ke 2 dari Phase0 Hacktiv8.
+Saya membuat game Tic-Tac-Toe sederhana dengan menggunakan Vanilla JS untuk mengatur **game mechanics**-nya,
+beserta HTML untuk **pembuatan canvas** dan CSS untuk **layouting**.
 Tampilannya juga sudah dibuat responsive dengan display mobile phone.
 
-Untuk mencoba game ini, silahkan klik [di sini.](https://laksonosuryadi.github.io/tictactoe "TIC-TAC-TOE!")
+Untuk mencoba game ini, silahkan klik [di sini](https://laksonosuryadi.github.io/tictactoe "TIC-TAC-TOE!").  
 Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosuryadi.github.io/) saya (klik Project-1 pada navigation bar).
 
 
@@ -17,6 +17,7 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
     DEKLARASI Constructor Function var Announce1,var Announce2 untuk di-instantiate pada function sayWinner()
 
     //G A M E   I N I T I A L I Z A T I O N
+
     INPUT Nama Player X
     INPUT Nama Player O
     RANDOMIZE Turn pertama dengan Object Math Math.round(Math.random() dikali 10
@@ -25,9 +26,12 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
     ELSE
         TAMPILKAN [Nama Player O] is O & gets the 1st Turn!
 
+
+
     //G A M E   M E C H A N I C S
+
     //PSEUDOCODE Function canvasClicked(canvasNumber)
-    PANGGIL Function canvasClicked(canvasNumber) _**jika pemain mengklik salah satu Kotak (Canvas)**_
+    PANGGIL Function canvasClicked(canvasNumber) Jika Player mengklik salah satu Kotak (Canvas)
         IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 0
             IF Modulus 2 dari turn adalah 0
                 GAMBARKAN tanda X pada canvas tersebut dengan warna Hijau
@@ -98,12 +102,12 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
                     TAMPILKAN Button PLAY AGAIN
                     UBAH value var q menjadi 1
 
-                        ELSE IF(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
+                    ELSE IF(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
                         PANGGIL function sayWinner(symbol)
                         TAMPILKAN Button PLAY AGAIN
                         UBAH value var q menjadi 1
 
-                            ELSE IF(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
+                        ELSE IF(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
                             PANGGIL function sayWinner(symbol)
                             TAMPILKAN Button PLAY AGAIN
                             UBAH value var q menjadi 1
@@ -118,8 +122,8 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
                                     TAMPILKAN Button PLAY AGAIN
                                     UBAH value var q menjadi 1
 
-                                        ELSE
-                                            RETURN true
+                                    ELSE
+                                        RETURN true
     ENDIF
 
 
@@ -174,7 +178,7 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
 
     //PSEUDOCODE Function reset
     TAMPILKAN pop-up window confirm untuk pertanyaan Play Again?
-        IF player memilih OK
+        IF Player memilih OK
             ALERT Now Loading...
             PANGGIL location.reload(true)
         ELSE
