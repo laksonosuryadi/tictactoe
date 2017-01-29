@@ -13,21 +13,21 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
 
 
 ##Pseudocode
-INISIALISASI Variables yang akan digunakan
-DEKLARASI Constructor Function var Announce1,var Announce2 untuk di-instantiate pada function sayWinner()
 
-//Randomize First Turn
-INPUT Nama Player X
-INPUT Nama Player O
-RANDOMIZE Turn pertama dengan Object Math Math.random
-IF Modulus 2 dari turn adalah 0
-    TAMPILKAN [Nama Player X] is X & gets the 1st Turn!
-ELSE
-    TAMPILKAN [Nama Player O] is O & gets the 1st Turn!
+    INISIALISASI Variables yang akan digunakan
+    DEKLARASI Constructor Function var Announce1,var Announce2 untuk di-instantiate pada function sayWinner()
 
-//Game Mechanics
-PANGGIL Function canvasClicked(canvasNumber) jika pemain mengklik salah satu Kotak (Canvas)
-IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 0
+
+    INPUT Nama Player X
+    INPUT Nama Player O
+    RANDOMIZE Turn pertama dengan Object Math Math.random
+    IF Modulus 2 dari turn adalah 0
+        TAMPILKAN [Nama Player X] is X & gets the 1st Turn!
+    ELSE
+        TAMPILKAN [Nama Player O] is O & gets the 1st Turn!
+
+    PANGGIL Function canvasClicked(canvasNumber) jika pemain mengklik salah satu Kotak (Canvas)
+    IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 0
     IF Modulus 2 dari turn adalah 0
         GAMBARKAN tanda X pada canvas tersebut dengan warna Hijau
     ELSE
