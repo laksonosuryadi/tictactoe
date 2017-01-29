@@ -105,11 +105,11 @@ function canvasClicked(canvasNumber){
               alert("THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.");
           } else {
               alert("THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.");
-          }        
+          }
     } else if (filled[canvasNumber] === true && canvasFilled === 9){
         alert("THE GAME IS OVER. \n Please Click PLAY AGAIN to Restart the game.");
     } else {
-        alert("THAT BOX IS ALREADY OCCUPIED! TIC ANOTHER BOX!");
+        alert("That box is already occupied. Please TIC another box.");
     }
 } //END OF function canvasClicked(canvasNumber)
 
@@ -220,6 +220,6 @@ function reset(){
         alert("Now Loading...");
         location.reload(true);
     } else {
- 	    alert("THANKS FOR PLAYING! SEE YOU AGAIN!");
+ 	    alert("Thanks for playing! See you again!");
     }
 } //END OF function reset()
