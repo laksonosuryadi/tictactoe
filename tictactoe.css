@@ -137,6 +137,12 @@ li {
   border-radius: 8px
 }
 
+.contact:hover {
+  background-color: rgb(255,78,68);
+  color: rgb(255,255,255);
+  border-color: rgb(255,78,68);
+}
+
 .underlined:hover {
   border-bottom: 2px solid rgb(255,78,68);
 }
