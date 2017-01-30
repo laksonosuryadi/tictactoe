@@ -50,8 +50,8 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
                 TAMPILKAN Now is [Nama Player O]'s O Turn
             ENDIF
 
-            IF jumlah canvas yang terisi sudah 9 DAN function checkForWinner return true
-                PANGGIL Function checkForDraw(content[canvasNumber])
+            IF jumlah canvas yang terisi sudah 9 DAN var q === 0
+                PANGGIL Function sayDraw()
             ENDIF
 
             ELSE IF canvas masih kosong (filled[canvasNumber] === false) DAN var q === 1
@@ -135,45 +135,15 @@ Link untuk game ini juga sudah saya sertakan di [GitHub Page](https://laksonosur
         TAMPILKAN value dari Function isTheWinner()
         HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
     ELSE IF value dari symbol adalah O
-        PANGGIL Object p1
+        PANGGIL Object p2
         TAMPILKAN value dari Function isTheWinner()
         HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
     ENDIF
 
 
-    //PSEUDOCODE Function checkForDraw
-    IF NOT(content[0] == symbol DAN content[1] == symbol DAN content[2] == symbol)
-        TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-        HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-        ELSE IF NOT(content[3] == symbol DAN content[4] == symbol DAN content[5] == symbol)
-            TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-            HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-            ELSE IF NOT(content[6] == symbol DAN content[7] == symbol DAN content[8] == symbol)
-                TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-                ELSE IF NOT(content[0] == symbol DAN content[3] == symbol DAN content[6] == symbol)
-                    TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                    HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-                    ELSE IF NOT(content[1] == symbol DAN content[4] == symbol DAN content[7] == symbol)
-                        TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                        HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-                        ELSE IF NOT(content[2] == symbol DAN content[5] == symbol DAN content[8] == symbol)
-                            TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                            HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-                            ELSE IF NOT(content[0] == symbol DAN content[4] == symbol DAN content[8] == symbol)
-                                TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                                HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-
-                                ELSE IF NOT(content[2] == symbol DAN content[4] == symbol DAN content[6] == symbol)
-                                    TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
-                                    HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
-    ENDIF
+    //PSEUDOCODE Function sayDraw
+    TAMPILKAN Button IT'S A DRAW!! PLAY AGAIN?
+    HILANGKAN tulisan Now is [Nama Player ...]'s ... Turn
 
 
     //PSEUDOCODE Function reset

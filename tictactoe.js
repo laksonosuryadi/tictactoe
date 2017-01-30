@@ -88,8 +88,8 @@ function canvasClicked(canvasNumber){
             document.getElementById("turn").innerHTML = "Now is "+ player2 +"'s (O) Turn";
         }
 
-         if(canvasFilled === 9 && checkForWinner(content[canvasNumber])){
-          checkForDraw(content[canvasNumber]);
+        if(canvasFilled === 9 && q === 0){
+            sayDraw();
         }
 
     } else if (filled[canvasNumber] === false && q === 1){
@@ -178,40 +178,10 @@ function sayWinner(symbol){
 } //END OF function sayWinner(symbol)
 
 
-function checkForDraw(symbol){
-    if(!(content[0] == symbol && content[1] == symbol && content[2] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility = "hidden";
-	}
-    else if(!(content[3] == symbol && content[4] == symbol && content[5] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility="hidden";
-	}
-    else if(!(content[6] == symbol && content[7] == symbol && content[8] == symbol)){
-       document.getElementById("button2").style.visibility="visible";
-       document.getElementById("turn").style.visibility="hidden";
-	}
-    else if(!(content[0] == symbol && content[3] == symbol && content[6] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility = "hidden";
-	}
-    else if(!(content[1] == symbol && content[4] == symbol && content[7] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility = "hidden";
-	}
-    else if(!(content[2] == symbol && content[5] == symbol && content[8] == symbol)){
-       document.getElementById("button2").style.visibility ="visible";
-       document.getElementById("turn").style.visibility ="hidden";
-	}
-    else if(!(content[0] == symbol && content[4] == symbol && content[8] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility = "hidden";
-	}
-    else if(!(content[2] == symbol && content[4] == symbol && content[6] == symbol)){
-       document.getElementById("button2").style.visibility = "visible";
-       document.getElementById("turn").style.visibility = "hidden";
-	}
-} //END OF function checkForDraw(symbol)
+function sayDraw(){
+     document.getElementById("button2").style.visibility = "visible";
+     document.getElementById("turn").style.visibility = "hidden";
+} //END OF function sayDraw()
 
 
 function reset(){
